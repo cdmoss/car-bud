@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import { open } from "@tauri-apps/api/shell";
 import Link from "next/link";
+import { env } from "../env/client.mjs";
 
 const Index: NextPage = () => {
   return (
@@ -39,7 +40,7 @@ const Index: NextPage = () => {
           className="rounded-full bg-white/80 px-10 py-3 text-xl font-bold text-black
       no-underline transition hover:bg-white/90"
           // Update this link to your app's URL before building
-          href="https://tauri-t3-app.vercel.app/home"
+          href={env.NEXT_PUBLIC_URL}
         >
           Start App
         </Link>
